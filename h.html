@@ -882,8 +882,6 @@
             themeToggle.addEventListener('change', function() {
                 document.body.setAttribute('data-theme', this.checked ? 'light' : 'dark');
             });
-            
-            // Speed control
             const speedControl = document.getElementById('simulationSpeed');
             const speedValue = document.getElementById('speedValue');
             speedControl.addEventListener('input', function() {
@@ -891,8 +889,7 @@
                 speedValue.textContent = `${(1000/simulationSpeed).toFixed(1)}x`;
             });
             let simulationSpeed = 2100 - speedControl.value;
-            
-            // Tab switching
+          
             const tabs = document.querySelectorAll('.tab');
             tabs.forEach(tab => {
                 tab.addEventListener('click', function() {
